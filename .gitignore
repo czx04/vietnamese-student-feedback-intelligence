@@ -1,0 +1,65 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Test, coverage, lint and type-check caches
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Trained models and checkpoints
+artifacts/
+*.joblib
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.ckpt
+
+# Generated evaluation reports
+reports/*
+
+# Local utility scripts
+scripts/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Operating-system files
+.DS_Store
+Thumbs.db
