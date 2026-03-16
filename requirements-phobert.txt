@@ -1,0 +1,6 @@
+# Install these on top of the CUDA-enabled PyTorch image supplied by Vast.ai.
+# Deliberately do not list torch here to avoid replacing its CUDA build.
+transformers>=4.57,<6.0
+accelerate>=1.0,<2.0
+py-vncorenlp>=0.1.4,<1.0
+safetensors>=0.4,<1.0
