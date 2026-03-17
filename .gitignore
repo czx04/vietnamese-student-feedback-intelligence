@@ -29,28 +29,42 @@ build/
 dist/
 *.egg-info/
 
+# Frontend dependencies and build output
+node_modules/
+frontend/dist/
+
 # Secrets and local configuration
 .env
 .env.*
 !.env.example
 
 # Trained models and checkpoints
-artifacts/
+# Keep the two small baseline models so a fresh clone can run immediately.
+artifacts/*
 *.joblib
 *.pkl
 *.pickle
 *.pt
 *.pth
 *.ckpt
+!artifacts/sentiment_model.joblib
+!artifacts/topic_model.joblib
 
 # Generated evaluation reports
 reports/*
+
+# Local documentation and guides
+*.md
+
+# Large local result archives
+*.tar
 
 # Local utility scripts
 scripts/
 
 # Logs and temporary files
 *.log
+*.db
 tmp/
 temp/
 

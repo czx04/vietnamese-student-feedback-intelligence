@@ -23,8 +23,15 @@ def segment_text(segmenter: Any, text: str) -> str:
 
 
 def build_segmenter(vncorenlp_dir: Path, download_model: bool = False) -> Any:
-    if shutil.which("java") is None:
-        raise RuntimeError("Java is required by VnCoreNLP but was not found in PATH")
+    # py-vncorenlp requires an absolute save_dir when configuring the JVM
+    # classpath. A relative path makes the JAR download succeed but class loading
+    # fail with NoClassDefFoundError.
+    vncorenlp_dir = vncorenlp_dir.expanduser().resolve()
+    if shutil.which("java") is None or shutil.which("javac") is None:
+        raise RuntimeError(
+            "A Java JDK (java and javac) is required by VnCoreNLP but was not "
+            "found in PATH"
+        )
 
     try:
         import py_vncorenlp
