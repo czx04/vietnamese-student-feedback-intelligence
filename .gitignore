@@ -55,6 +55,7 @@ reports/*
 
 # Local documentation and guides
 *.md
+!README.md
 
 # Large local result archives
 *.tar
